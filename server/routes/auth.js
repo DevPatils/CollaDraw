@@ -126,7 +126,7 @@ authRouter.post('/forgetPassword',[
             JWT_SECRET
         );
 
-        // Respond with success message and JWT token
+       
         res.json({ message: 'Token generated successfully!', token });
     } catch (error) {
         console.error(error);
