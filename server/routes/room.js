@@ -47,6 +47,7 @@ roomrouter.delete('/delete/:id', fetchuser, async (req, res) => {
         }
 
         // Delete the room
+        
         await Room.findByIdAndDelete(roomId);
 
         res.status(200).json({ message: 'Room deleted successfully' });

@@ -2,6 +2,7 @@
 const connectToDatabase = require('./db');
 const authRouter = require('./routes/auth');
 const roomrouter = require('./routes/room');
+const boardouter = require('./routes/whiteboard');
 connectToDatabase();
 
 const express = require('express');
@@ -12,6 +13,7 @@ app.use(express.json());
 
 app.use('/api/auth',authRouter );
 app.use('/api/rooms',roomrouter );
+app.use('/api/whiteboard',boardouter );
 
 app.listen(3000, () => {    
     console.log('Server is running on port 3000');
